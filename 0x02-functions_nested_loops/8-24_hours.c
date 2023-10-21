@@ -45,5 +45,5 @@ hours_ones++;
 }
 hours_ones = '0';
 hours_tens++;
-} 
+}
 }
