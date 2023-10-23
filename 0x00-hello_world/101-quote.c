@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 /**
 * main - print the size of various types
 *
@@ -9,9 +9,11 @@
 */
 
 
-int main()
+#include <unistd.h>
+
+int main(void)
 {
-char *msg = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-write(STDERR_FILENO, msg, 42);
+char msg[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+write(2, msg, 59);  // 59 characters in the message
 return 1;
 }
