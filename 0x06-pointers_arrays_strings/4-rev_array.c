@@ -2,7 +2,6 @@
 
 /**
  * reverse_array - reverses the contents of an array
- * @author: muhabeid
  * @a: integer array to be reversed
  * @n: length of array a
  *
