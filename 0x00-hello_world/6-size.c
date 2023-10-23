@@ -3,12 +3,11 @@
 /**
 * main - entry point of C
 * Return: void returns no value
+*
+* printf()-displays output on the screen
 */
 int main(void)
 {
-/**
-* printf()-displays output on the screen
-*/
 printf("Size of a char: %d byte(s)\n", sizeof(char));
 printf("Size of an int: %d byte(s)\n", sizeof(int));
 printf("Size of a long int: %d byte(s)\n", sizeof(long int));
