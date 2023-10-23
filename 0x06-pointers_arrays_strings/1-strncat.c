@@ -10,22 +10,19 @@
 *
 *Return: pointer to destination string.
 */
-char*_strncat(char*dest,const char*src,intn)
+char *_strncat(char *dest, char *src, int n)
 {
-intdest_len=0;
-intsrc_len=0;
-while(dest[dest_len]!='\0')
+int length, j;
+
+length = 0;
+while (dest[length] != '\0')
 {
-dest_len++;
+length++;
 }
-while(src[src_len]!='\0'&&src_len<n)
+for (j = 0; j < n && src[j] != '\0'; j++, length++)
 {
-src_len++;
+dest[length] = src[j];
 }
-for(inti=0;i<src_len;i++)
-{
-dest[dest_len+i]=src[i];
-}
-dest[dest_len+src_len]='\0';
-returndest;
+dest[length] = '\0';
+return (dest);
 }
