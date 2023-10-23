@@ -22,5 +22,5 @@ while ((*(dest + i) = *(src + j)))
 i++;
 j++;
 }
-return (NULL);
+return (dest);
 }
