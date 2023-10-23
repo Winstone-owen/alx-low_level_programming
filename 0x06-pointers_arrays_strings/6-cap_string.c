@@ -2,7 +2,6 @@
 
 /**
 * cap_string - capitalizes all words in a string
-* @author: muhabeid
 * @s: string to capitalize
 *
 * Return: address of s
