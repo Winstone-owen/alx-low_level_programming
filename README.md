@@ -1,1 +1,1 @@
-My first c program
+pointers arrays and strings
