@@ -1,16 +1,16 @@
-#include <stdio.h>
+#include <unistd.h>
+
 /**
- * main - print the size of various types
+ * main - Entry point of the program
  *
- * Description: prints the size of various types on the computer it is compiled
- * and run on
+ * Description: Prints "and that piece of art is useful" - Dora Korpar, 2015-10-19",
+ * followed by a new line, to the standard error.
  *
- * Return: Always 0 (Success)
+ * Return: Always 1 (Failure)
  */
-
-
-int main() {
-    char *msg = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-    write(STDERR_FILENO, msg, 42);
-    return 1;
+int main(void)
+{
+	char msg[]="and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	write(STDERR_FILENO,msg,sizeof(msg)-1);
+	return (1);
 }
