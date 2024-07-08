@@ -8,9 +8,9 @@
  * Return: Always 0 (Success)
  */
 
-int main(void)
-{
-	char *msg = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	write(STDERR_FILENO, msg, 42);
-	return (1);
+
+int main() {
+    char *msg = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+    write(STDERR_FILENO, msg, 42);
+    return 1;
 }
