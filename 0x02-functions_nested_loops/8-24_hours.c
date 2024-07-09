@@ -11,26 +11,26 @@ void jack_bauer(void)
 {
 	int hours_tens, hours_ones, minutes_tens, minutes_ones, hours_max;
 
-	hours_max = '2'; // Start with hours from '00' to '23'
-	hours_tens = '0'; // Initialize tens digit of hours
+	hours_max = '2'; /* Start with hours from '00' to '23' */
+	hours_tens = '0'; /* Initialize tens digit of hours */
 
 	while (hours_tens <= '2')
 	{
 		if (hours_tens == '2')
 		{
-			hours_max = '3'; // Change maximum hours to '03' to '23'
+			hours_max = '3'; /* Change maximum hours to '03' to '23' */
 		}
-		hours_ones = '0'; // Initialize ones digit of hours
+		hours_ones = '0'; /* Initialize ones digit of hours */
 
 		while (hours_ones < hours_max)
 		{
-			minutes_tens = '0'; // Initialize tens digit of minutes
+			minutes_tens = '0'; /* Initialize tens digit of minutes */
 
 			while (minutes_tens < '6')
 			{
-				minutes_ones = '0'; // Initialize ones digit of minutes
+				minutes_ones = '0'; /* Initialize ones digit of minutes */
 
-				while (minutes_ones < '10')
+				while (minutes_ones < '9') /* Changed '10' to '9' to avoid multi-character constant */
 				{
 					_putchar(hours_tens);
 					_putchar(hours_ones);
@@ -40,13 +40,13 @@ void jack_bauer(void)
 					_putchar('\n');
 					minutes_ones++;
 				}
-				minutes_ones = '0'; // Reset ones digit for next tens digit of minutes
+				minutes_ones = '0'; /* Reset ones digit for next tens digit of minutes */
 				minutes_tens++;
 			}
-			minutes_tens = '0'; // Reset tens digit for next hour
+			minutes_tens = '0'; /* Reset tens digit for next hour */
 			hours_ones++;
 		}
-		hours_ones = '0'; // Reset ones digit for next tens digit of hours
+		hours_ones = '0'; /* Reset ones digit for next tens digit of hours */
 		hours_tens++;
 	}
 }
