@@ -3,6 +3,9 @@
 /**
  * main - Prints numbers between 00 to 99.
  *
+ * Description: Prints all two-digit combinations in ascending order
+ * separated by commas and spaces.
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
