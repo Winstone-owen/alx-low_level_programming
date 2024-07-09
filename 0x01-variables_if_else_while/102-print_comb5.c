@@ -1,28 +1,48 @@
 #include <stdio.h>
 
-int main()
+/**
+ * main - Prints numbers between 00 to 99.
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
 {
-    for (int i = 0; i < 100; ++i)
+    int i, e, g, h, op1, op2;
+
+    i = e = g = h = 48;
+    while (h < 58)
     {
-        for (int j = i; j < 100; ++j)
+        g = 48;
+        while (g < 58)
         {
-            // Print the first number
-            putchar((i / 10) + '0');
-            putchar((i % 10) + '0');
-            putchar(' ');
-
-            // Print the second number
-            putchar((j / 10) + '0');
-            putchar((j % 10) + '0');
-
-            // Print comma and space if not the last combination
-            if (i != 99 || j != 99)
+            e = 48;
+            while (e < 58)
             {
-                putchar(',');
-                putchar(' ');
+                i = 48;
+                while (i < 58)
+                {
+                    op1 = (h * 10) + g;
+                    op2 = (e * 10) + i;
+                    if (op1 < op2)
+                    {
+                        putchar(h);
+                        putchar(g);
+                        putchar(' ');
+                        putchar(e);
+                        putchar(i);
+                        if (h == 57 && g == 56 && e == 57 && i == 57)
+                            break;
+                        putchar(',');
+                        putchar(' ');
+                    }
+                    i++;
+                }
+                e++;
             }
+            g++;
         }
+        h++;
     }
-
-    return 0;
+    putchar('\n');
+    return (0);
 }
