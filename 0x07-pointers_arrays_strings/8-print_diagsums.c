@@ -23,23 +23,3 @@ void print_diagsums(int *a, int size)
 	printf("Principal Diagonal: %d\n", principal);
 	printf("Secondary Diagonal: %d\n", secondary);
 }
-
-/**
- * main - Entry point.
- *
- * Return: Always 0 (Success).
- */
-int main(void)
-{
-	int matrix[3][3] = {
-		{1, 2, 3},
-		{4, 5, 6},
-		{7, 8, 9}
-	};
-
-	int size = 3;
-	int *a = (int *)matrix;
-
-	print_diagsums(a, size);
-	return (0);
-}
